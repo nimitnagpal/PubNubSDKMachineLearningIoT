@@ -1,0 +1,48 @@
+from pubnub.callbacks import SubscribeCallback
+from pubnub.enums import PNOperationType, PNStatusCategory
+ 
+class MySubscribeCallback(SubscribeCallback):
+    def status(self, pubnub, status):
+        pass
+
+        if status.operation == PNOperationType.PNSubscribeOperation \
+                or status.operation == PNOperationType.PNUnsubscribeOperation:
+            if status.category == PNStatusCategory.PNConnectedCategory:
+                pass
+                
+            elif status.category == PNStatusCategory.PNReconnectedCategory:
+                pass
+                
+            elif status.category == PNStatusCategory.PNDisconnectedCategory:
+                pass
+                
+            elif status.category == PNStatusCategory.PNUnexpectedDisconnectCategory:
+                pass
+                
+                
+            elif status.category == PNStatusCategory.PNAccessDeniedCategory:
+                pass
+                
+            else:
+                pass
+                
+        elif status.operation == PNOperationType.PNSubscribeOperation:
+             heartbeart config>
+            if status.is_error():
+                pass
+                
+            else:
+                pass
+                
+        else:
+            pass
+            
+ 
+    def presence(self, pubnub, presence):
+        pass  
+ 
+    def message(self, pubnub, message):
+        pass  
+ 
+ 
+pubnub.add_listener(MySubscribeCallback())

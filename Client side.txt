@@ -1,0 +1,9 @@
+from pubnub.pnconfiguration import PNConfiguration
+from pubnub.pubnub import PubNub
+ 
+pnconfig = PNConfiguration()
+pnconfig.subscribe_key = "sub-c-f8ee4c62-2497-11e8-a183-761142583d66"
+pnconfig.publish_key = "pub-c-89c7fbd5-76f5-4c6a-8511-c153e7517db4"
+pnconfig.ssl = False
+ 
+pubnub = PubNub(pnconfig)
